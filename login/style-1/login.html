@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="em-low txt-c mbxxl">Login</h1>
+    <div class="row">
+        <div class="col-sm-12 col-sm-offset-6 col-md-8 col-md-offset-8">
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="name">Username</label>
+                    <input class="form-control" id="name" name="name" type="text" required="required" autocorrect="off" autocapitalize="off" autofocus="">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label for="password">Password</label>
+                        </div>
+
+                    </div>
+
+                    <input class="form-control" id="password" type="password" name="password" required="required">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-highlight-1 btn-block">Login</button>
+                </div>
+                <hr class="divider mtxxl">
+                <h5 class="em-low txt-c">Don't have an account?</h5>
+                <a class="btn btn-default btn-block" href="/signup" rel="npm:signup">Create an Account</a>
+                <input type="hidden" name="done" value="">
+                <input type="hidden" name="crumb" value="KiBt-r7qfmXuuLcjEqjHiRyX756gz5_DFA-BFo81-aj">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
