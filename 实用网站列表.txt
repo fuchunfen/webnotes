@@ -1,3 +1,9 @@
 工具
 1.can i use:一个提供HTML5,CSS3,JS等新技术浏览器兼容一览表的网站
   http://caniuse.com/
+2.移动端尺寸规范和分辨率
+http://www.uigreat.com/page/guifan
+
+
+学习网站：
+1.菜鸟教程（各种教程还挺全的）http://www.runoob.com/
