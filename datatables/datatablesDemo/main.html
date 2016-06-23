@@ -27,7 +27,10 @@
     <script type="text/javascript" src="laydate/laydate.js"></script>
 
     <!-- 和datatables有关的js文件 -->
-    <script type="text/javascript" src="js/department.js" ></script>
+    <!--<script type="text/javascript" src="js/department.js" ></script>-->
+    <script type="text/javascript" src="js/dt-new.js" ></script>
+
+
     <!-- 和datatables有关的css文件 -->
     <style type="text/css">
         .selected {
@@ -98,9 +101,10 @@
     <div class="col-md-2">
         <div class="list-group">
             <a href="#" class="list-group-item active">
-                系统菜单
+                分类管理
             </a>
-            <a href="" class="list-group-item">部门管理</a>
+            <a href="" class="list-group-item">用户管理</a>
+            <a href="" class="list-group-item">权限管理</a>
             <a href="javascript:logout()" class="list-group-item">安全退出</a>
         </div>
     </div>
@@ -165,12 +169,10 @@
                 <thead>
                 <tr>
                     <th><input type="checkbox" name="allChecked" /></th>
-                    <th>id</th>
-                    <th>部门名称</th>
-                    <th>部门备注</th>
-                    <th>状态</th>
-                    <th>创建时间</th>
-                    <th>操作</th>
+                    <th>name</th>
+                    <th>position</th>
+                    <th>salary</th>
+                    <th>office</th>
                 </tr>
                 </thead>
             </table>
