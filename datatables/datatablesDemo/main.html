@@ -11,8 +11,171 @@
     <script src="js/jquery.min.js"></script>
 
     <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/dataTables.bootstrap.css" />
+    <!-- 导出数据按钮样式 -->
+    <link type="text/css" rel="stylesheet" href="css/dataTables.tableTools.css" />
+
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+    <!-- 导出数据按钮引用的js-->
+    <script type="text/javascript"  charset="utf-8" src="js/dataTables.tableTools.js"></script>
+
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script src="js/sucaijiayuan.js"></script>
+    <!-- 日期控件 -->
+    <script type="text/javascript" src="laydate/laydate.js"></script>
+
+    <!-- 和datatables有关的js文件 -->
+    <script type="text/javascript" src="js/department.js" ></script>
+    <!-- 和datatables有关的css文件 -->
+    <style type="text/css">
+        .selected {
+            background-color: #DFF0D8;
+        }
+
+        #example_length {
+            float: left;
+        }
+
+        .odd td strong {
+            color: red;
+        }
+
+        #deleteButton {
+            float: left;
+        }
+
+        #addButton {
+            float: left;
+        }
+
+        #topPlugin {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .modal-footer span {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            float: left;
+            font-size: 16px;
+        }
+
+        div.dataTables_paginate {
+            margin: 0;
+            white-space: nowrap;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            height:25px;
+        }
+
+    </style>
 </head>
 <body>
+<div class="row">
+    <div class="col-md-12">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"  >
+            <!--
+              <div class="container">
+              -->
+            <div class="navbar-header">
+                <a class="navbar-brand " href="#">SpannerX后台管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-right">
+                <a class="navbar-brand" href="#">当前用户：x-spring</a>
+            </div>
+            <!--
+          </div>
+          -->
+        </nav>
+    </div>
+</div>
+<div class="row" style="padding-top: 45px">
+    <div class="col-md-2">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                系统菜单
+            </a>
+            <a href="" class="list-group-item">部门管理</a>
+            <a href="javascript:logout()" class="list-group-item">安全退出</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div>
+            <ol class="breadcrumb">
+                <li><span class="glyphicon glyphicon-home"></span>&nbsp;<a href="">主页</a></li>
 
+                <li class="active">系统菜单</li>
+
+            </ol>
+        </div>
+        <!-- 搜索框 -->
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <form class="form-horizontal" action="" method="post">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">部门名称：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="deptname" name="deptname" style="width: 250px">
+                            </div>
+                            <label class="col-sm-2 control-label">部门状态：</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" style="width: 250px" id="state" name="state">
+                                    <option value="">请选择...</option>
+                                    <option value="1">有 效</option>
+                                    <option value="2">无 效</option>
+                                </select>
+                            </div>
+                            <!--
+                        <div class="col-sm-2">
+                           <button type="button" class="btn btn-primary" style="float: right;" onclick="javascript:window.location.href=''">添 加</button>
+                         </div>
+                         -->
+                        </div>
+                        <div class="form-group">
+
+                            <label class="col-sm-2 control-label">创建开始时间：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="startTime" name="startTime" style="width: 250px" onclick="laydate()">
+                            </div>
+                            <label class="col-sm-2 control-label">创建结束时间：</label>
+                            <div class="col-sm-3">
+                                <!-- <input type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"> 年月日时分秒-->
+                                <input type="text" class="form-control" id="endTime" name="endTime" style="width: 250px" onclick="laydate()">
+                            </div>
+                            <div class="col-sm-2">
+                                <button  type="button" class="btn btn-success search" style="float: right;" >查 询</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- 显示表格边框table-bordered  缩小表格间距table-condensed -->
+            <table id="example" class="table table-bordered table-condensed">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" name="allChecked" /></th>
+                    <th>id</th>
+                    <th>部门名称</th>
+                    <th>部门备注</th>
+                    <th>状态</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>
