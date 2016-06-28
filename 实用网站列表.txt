@@ -3,6 +3,8 @@
   http://caniuse.com/
 2.移动端尺寸规范和分辨率
 http://www.uigreat.com/page/guifan
+3.网易NEC前端规范(里面有规范，框架，代码库等）
+http://nec.netease.com/
 
 
 学习网站：
