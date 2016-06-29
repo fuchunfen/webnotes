@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>两列右侧自适应布局（一）</title>
+    <style>
+        .layout-box{
+            margin: 0 10px;
+        }
+        .layout-left{
+            position: relative;
+            float: left;
+            width:200px;
+            margin-right: -210px;
+            height:500px;
+            background-color: #fcabab;
+        }
+        .layout-right{
+            float: right;
+            width:100%;
+        }
+        .layout-right .right-box{
+            margin-left:210px;
+            height:500px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-box">
+        <div class="layout-left">左侧定宽</div>
+        <div class="layout-right">
+            <div class="right-box">右侧自适应</div>
+        </div>
+    </div>
+</body>
+</html>
