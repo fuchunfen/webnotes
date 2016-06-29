@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三列中间自适应布局（一）</title>
+    <style>
+
+        .layout-left{
+            position: relative;
+            float:left;
+            width:100px;
+            margin-right: -100px;
+            height:500px;
+            background-color: #fcabab;
+        }
+        .layout-right{
+            position: relative;
+            float: right;
+            width:100px;
+            margin-left: -100px;
+            height:500px;
+            background-color: #deb887;
+        }
+        .layout-middle{
+            float: left;
+            width: 100%;
+        }
+        .layout-middle .middle-box{
+            margin:0 110px 0;
+            background-color: #ff0000;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-box">
+        <div class="layout-left">左边栏</div>
+        <div class="layout-middle">
+            <div class="middle-box">中间栏</div>
+        </div>
+        <div class="layout-right">右边栏</div>
+    </div>
+</body>
+</html>

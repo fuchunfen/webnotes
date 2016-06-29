@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三列中间自适应布局（二）</title>
+    <style>
+        .layout-box{
+            position: relative;
+        }
+        .layout-left{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100px;
+            height:500px;
+            background-color: #deb887;
+        }
+        .layout-right{
+            position: absolute;
+            top:0;
+            right:0;
+            width:100px;
+            height:500px;
+            background-color: #deb887;
+        }
+        .layout-middle{
+            height: 500px;
+            margin:0 110px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-box">
+        <div class="layout-left">左边栏</div>
+        <div class="layout-middle">中间栏</div>
+        <div class="layout-right">右边栏</div>
+    </div>
+</body>
+</html>
