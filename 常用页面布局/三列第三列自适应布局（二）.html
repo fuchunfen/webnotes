@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三列第三列自适应布局（二）</title>
+    <style>
+        .layout-box{
+            position: relative;
+        }
+        .layout-col1{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100px;
+            height:500px;
+            background-color: #fcabab;
+        }
+        .layout-col2{
+            position: absolute;
+            top:0;
+            left:110px;
+            width: 100px;
+            height: 500px;
+            background-color: #deb887;
+        }
+        .layout-col3{
+            height:500px;
+            margin-left: 220px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-box">
+        <div class="layout-col1">第一栏</div>
+        <div class="layout-col2">第二栏</div>
+        <div class="layout-col3">第三栏-自适应</div>
+    </div>
+</body>
+</html>
