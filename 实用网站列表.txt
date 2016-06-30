@@ -5,7 +5,8 @@
 http://www.uigreat.com/page/guifan
 3.网易NEC前端规范(里面有规范，框架，代码库等）
 http://nec.netease.com/
-
+4.聚合分享，一个前端资源分享站，可下载js插件和模板等，免费下载且不用注册
+http://www.juheweb.com/
 
 学习网站：
 1.菜鸟教程（各种教程还挺全的）http://www.runoob.com/
