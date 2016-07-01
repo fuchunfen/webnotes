@@ -5,7 +5,7 @@
     <title>动态添加或删除tags</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!-- 原版为huheweb.com.js，这里取消了其失去焦点后自动添加的功能，改为单击button后添加 -->
-    <script type="text/javascript" src="js/juheweb.com.js"></script>
+    <script type="text/javascript" src="js/tags.js"></script>
     <style>
         span#radius {
             display: block;
@@ -59,16 +59,25 @@
      最后会添加一个input文本框：
      <input class="tabinput" name="tabinput" style="width:500px;height:15px;" type="text">
      -->
+   <!-- <input id='addTags' type="button" value="确认">-->
+    <select id="addTagsSelect">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
     <input id='addTags' type="button" value="确认">
+
 </div>
 <script type="text/javascript">
     $(function () {
         var initData = "地址1,地址2,地址3,地址4";
-        $("#tag").tabControl({maxTabCount: 10, tabW: 500, tabMaxLen: 100}, initData);
-        $("#getTags").click(function () {
-            var tags = $("#tag").getTabVals();
-            alert(tags.join("，"));
-        });
+        var data = [{"id":1,"name":"删除权限"},{"id":2,"name":"添加权限"}];
+        $("#tag").tabControl({maxTabCount: 10, tabW: 500, tabMaxLen: 100}, data);
+        /*$("#addTags").click(function () {
+            /!*var tags = $("#tag").getTabVals();
+            alert(tags.join("，"));*!/
+            $("input[type='text'][name='tabinput']:last").click();
+        });*/
     });
 </script>
 </body>
