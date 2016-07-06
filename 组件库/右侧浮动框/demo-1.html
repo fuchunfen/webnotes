@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <title>右侧浮动框收缩/展开demo</title>
+    <style>
+        .left-bar{
+            position: fixed;
+            top:200px;
+            right:0;
+            background-color: #ccffaa;
+        }
+        .toggle-btn{
+            float:left;
+            width:50px;
+            height:50px;
+            background-color: red;
+        }
+        .bar-item{
+            float:right;
+            width:150px;
+            height:200px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        var flag = true;
+        $(document).ready(function () {
+            /*$(".toggle-btn").click(function () {
+                $(".bar-item").slideToggle();
+            });*/
+
+            $(".toggle-btn").click(function () {
+                if(flag){
+                    $(".bar-item").animate({width:'0px'});
+                    flag=false;
+                }else{
+                    $(".bar-item").animate({width:'150px'});
+                    flag=true;
+                }
+
+            });
+           /* $(".toggle-btn").toggle(function(){
+                $(".bar-item").hide(1000);
+            },function(){
+                $(".bar-item").show(1000);
+            })*/
+        });
+    </script>
+</head>
+<body>
+
+    <div class="left-bar">
+        <button class="toggle-btn">收起</button>
+        <div class="bar-item">内容</div>
+    </div>
+</body>
+</html>
