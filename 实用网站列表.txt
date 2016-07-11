@@ -7,6 +7,8 @@ http://www.uigreat.com/page/guifan
 http://nec.netease.com/
 4.聚合分享，一个前端资源分享站，可下载js插件和模板等，免费下载且不用注册
 http://www.juheweb.com/
+5.一个搜索书籍并可以免费下载的网站
+http://bookzz.org/
 
 学习网站：
 1.菜鸟教程（各种教程还挺全的）http://www.runoob.com/
