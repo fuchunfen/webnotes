@@ -41,6 +41,8 @@
 				var __inputobj = $("input[type='text'][name='tabinput']", obj).eq(index);
 				__inputobj.val(_tags[index].name.substr(0, opts.tabMaxLen)).css("display", "none");
 				compTab(obj, __inputobj, _tags[index].name.substr(0, opts.tabMaxLen),_tags[index].id);
+			}else{
+				$("input[type='text'][name='tabinput']:last").css("display", "none");
 			}
 			$("input[type='text'][name='tabinput']:last", obj).bind("keydown blur click",
 			function(event) {
@@ -93,16 +95,20 @@
 
 
 		}
+		//增加标签-select
 		$("#addTags").on("click",function (event) {
 			var inputObj = $("input[type='text'][name='tabinput']:last");
 
 			var id = $("#addTagsSelect").val();
 			var value = $("#addTagsSelect").find("option:selected").text();
 			compTab(jqObj, inputObj, value, id);
-			var textHtml = "<input class='tabinput' name='tabinput' style='width:" + opts.tabW + "px;height:" + opts.tabH + "px;' type='text'/>";
+			var textHtml = "<input class='tabinput' name='tabinput' style='display:none;width:" + opts.tabW + "px;height:" + opts.tabH + "px;' type='text' />";
 			jqObj.append(textHtml);
+			/*textHtml.hide();*/
 
 		});
+
+
 		//完成标签编写
 		var compTab = function(obj, inputObj, value,id) {
 			inputObj.next("span").remove();//删除紧跟input元素後的span

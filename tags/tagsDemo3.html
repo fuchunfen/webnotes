@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动态添加或删除tags</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- 原版为huheweb.com.js，这里取消了其失去焦点后自动添加的功能，改为单击button后添加 -->
+    <script type="text/javascript" src="js/tags.js"></script>
+    <style>
+        *{margin:0;padding:0;list-style:none;border:none;outline:none;}
+        #tag{width:250px;  text-align:left; padding:10px; border:2px #E0E0E0 solid; line-height:25px;}
+        /*input post tab*/
+        div.radius_shadow{border:1px solid #DBDBDB;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;padding:5px;font-size:12px;background:#fff;}
+        span#radius{display:inline-block;float:none;font-size:12px;padding:2px 5px;margin:-2px 5px 15px;border:1px solid #E0E0E0; background-color:#F0F0F0;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius: 5px;color:#000;}
+        .tabinput{margin-left:5px;border:1px solid #eee;border-radius:3px;padding:5px;}
+        .tabinput:focus{border-color:#ddd;}
+        a#deltab{cursor:pointer;display:inline-block;color:#808080;margin-left:5px;font-weight:bold;}
+        a#deltab:hover{color:#D2D2D2;text-decoration:none;}
+        #getTab{ margin-top:10px;border:1px solid #E0E0E0; background-color:#F0F0F0; padding:5px 10px; cursor:pointer;}
+    </style>
+</head>
+<body>
+<div style="width:760px;margin:40px auto 0 auto;text-align:center;">
+    <div id="tag"></div>
+    <!--
+      每添加一个tag会在div#id中添加一个如下的结构：
+     <span name="tab" id="radius"><b>地址n</b><a id="deltab">×</a></span>
+     最后会添加一个input文本框：
+     <input class="tabinput" name="tabinput" style="width:500px;height:15px;" type="text">
+     -->
+   <!-- <input id='addTags' type="button" value="确认">-->
+
+
+</div>
+<script type="text/javascript">
+    $(function () {
+        var initData = "地址1,地址2,地址3,地址4";
+        var data = [{"id":1,"name":"删除权限"},{"id":2,"name":"添加权限"},{"id":3,"name":"修改权限"}];
+        $("#tag").tabControl({maxTabCount: 100, tabW: 500, tabMaxLen: 100}, data);
+        /*$("#addTags").click(function () {
+            /!*var tags = $("#tag").getTabVals();
+            alert(tags.join("，"));*!/
+            $("input[type='text'][name='tabinput']:last").click();
+        });*/
+    });
+</script>
+</body>
+</html>
