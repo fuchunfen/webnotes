@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            _overflow-y: scroll;
+        }
+
+        /* 底部自适应文档和窗口  */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .main-container {
+            position: relative;
+            min-height: 100%;
+
+        }
+
+        .content {
+            padding: 0 0 60px;
+            zoom: 1;
+        }
+
+        .public-footer {
+            height: 50px;
+            margin: -50px 0 0;
+            background: #000;
+            color: #fff;
+        }
+
+        p {
+            padding: 10px;
+            margin: 0;
+        }
+
+        .content p {
+            line-height: 50px;
+            background: #dfedf0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <div class="content">
+        <p>请增加或减少内容，或改变窗口大小，以便查看效果。</p>
+        <p>请增加或减少内容，或改变窗口大小，以便查看效果。</p>
+        <p>请增加或减少内容，或改变窗口大小，以便查看效果。</p>
+        <p>请增加或减少内容，或改变窗口大小，以便查看效果。</p>
+        <p>请增加或减少内容，或改变窗口大小，以便查看效果。</p>
+    </div>
+</div>
+<div class="public-footer">
+    <p>底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</p>
+</div>
+</body>
+</html>
