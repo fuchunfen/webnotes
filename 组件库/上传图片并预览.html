@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片上传并预览</title>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<img class="img-responsive avatar-view" id="avatar-img" src="" alt="Avatar"
+                                     title="Change the avatar" width="180" height="180">
+ <button id="avatar-btn" class="avatar-btn btn btn-default">upload</button>
+<form id="uploadImgForm" action="/upload" method="post"
+                          enctype="multipart/form-data">
+                        
+                                <input  type="file" title="上传头像" name="fileField" id="upload-avatar"
+                                       accept="image/*" style="display:none;">
+                        
+                    </form>
+ <script>
+
+        $('#avatar-btn').click(function () {
+            $("#upload-avatar").click();
+
+            $("#upload-avatar").on("change", function () {
+
+                var objUrl = getObjectURL(this.files[0]);  //获取图片的路径，该路径不是图片在本地的路径
+
+                if (objUrl) {
+
+                    $("#avatar-img").attr("src", objUrl);      //将图片路径存入src中，显示出图片
+
+
+                }
+
+            });
+
+        });
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+
+            var url = null;
+
+            if (window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+
+            return url;
+
+        }
+    </script>
+</body>
+</html>
