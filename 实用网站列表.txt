@@ -9,6 +9,13 @@ http://nec.netease.com/
 http://www.juheweb.com/
 5.一个搜索书籍并可以免费下载的网站
 http://bookzz.org/
+6.前端人的俱乐部 
+http://f2er.club/
+7.前端收集 
+https://github.com/foru17/front-end-collect
 
 学习网站：
 1.菜鸟教程（各种教程还挺全的）http://www.runoob.com/
+2.如何跟上前端开发的最新前沿 https://uptodate.frontendrescue.org/zh/
+3.适用于小团队的前端规范  https://github.com/hzlzh/Front-End-Standards
+4.Limu：JavaScript的那些书 http://web.jobbole.com/8087/
