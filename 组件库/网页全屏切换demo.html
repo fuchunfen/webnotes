@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页全屏切换demo</title>
+</head>
+<body>
+    <button onclick="fullScreen();">点击全屏</button>
+    <button onclick="cancleFullScreen();">取消全屏</button>
+<script>
+    function fullScreen() {
+        var docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        }
+        else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+        else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        }
+        else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        }
+    }
+    function cancleFullScreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+        else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        }
+        else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
+    }
+</script>
+</body>
+</html>
