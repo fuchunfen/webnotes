@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginForm-2</title>
+    <style>
+        /* 练习参考页面：https://papeair.com/dashboard/#/login */
+        body{
+            background-color: #618fee;
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 62.5%;
+        }
+
+        .login-box{
+            position: fixed;
+            top:50%;
+            left:50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width:500px;
+        }
+        .login-box .logo{
+            text-align: center;
+
+        }
+        .login-box .logo img{
+            width:200px;
+        }
+        .login-box .content{
+            width:300px;
+            margin:10px auto;
+        }
+        .login-box .content .item{
+            margin-top:20px;
+            width:100%;
+        }
+        .login-box .content label{
+            display: block;
+            width:100%;
+            font-size: 1.4rem;
+            color:#fff;
+        }
+        .login-box .content input{
+            width:100%;
+            margin-top:10px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            background-color: transparent;
+            padding:10px 12px;
+            box-sizing: border-box;
+            font-size: 1.4rem;
+            color:#fff;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+        .login-box .btn{
+            width:100%;
+            padding:6px 40px;
+            margin-top:30px;
+            background-color: #8cc63f;
+            color:#fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px #5f852a;
+        }
+        .login-box .btn:hover{
+            background-color: #95d242;
+        }
+        .login-box .login-gif{
+            text-align: center;
+            margin-top: 80px;
+        }
+        .login-box .login-gif img{
+            width:60px;
+        }
+
+        .login-box .content input:focus{
+            border-color:#fff;
+            box-shadow: inset 0 3px 3px rgba(0,0,0,.075), 0 0 10px rgba(255, 255, 255, .9);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">
+            <img src="images/logoWhite.png">
+        </div>
+        <div class="content">
+            <div class="item">
+                <label>Username</label>
+                <input type="text" name="username">
+            </div>
+            <div class="item">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <button class="btn">Login</button>
+        </div>
+        <div class="login-gif">
+            <img src="images/login.gif">
+        </div>
+    </div>
+</body>
+</html>
